@@ -13,6 +13,9 @@ on:
   schedule:
     - cron: '42 9 * * 0'
 
+env:
+  DISPLAY: ":99.0" # Set a display for Xvfb
+
 jobs:
   analyze:
     name: Analyze (${{ matrix.language }})
@@ -29,8 +32,15 @@ jobs:
         include:
         - language: java-kotlin
           build-mode: autobuild
+    services:
+      xvfb:
+        image: selenium/standalone-chrome:latest
+        options: -e VNC_SERVER=true -e VNC_PORT=5900
 
     steps:
+    - uses: actions/checkout@v4
+    - name: Start Xvfb
+      run: Xvfb $DISPLAY -ac -screen 0 1600x1200x24 > /dev/null 2>&1 &
     - name: Checkout repository
       uses: actions/checkout@v4
 
