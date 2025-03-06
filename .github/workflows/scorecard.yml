@@ -72,7 +72,7 @@ jobs:
           category: "/language:${{ matrix.language }}"
 
       - name: Run Scorecard Analysis
-        uses: ossf/scorecard-action@v2
+        uses: ossf/scorecard-action@v3
         with:
           results_file: results.sarif
           format: sarif
