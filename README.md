@@ -1,5 +1,3 @@
-# ClockSystem-TP3 (6/03/2025)
-
 Test code:
 ![Gradle CI](https://github.com/3npC0nf1g/ClockSystem-TP3/actions/workflows/gradle.yml/badge.svg)
 
