@@ -13,8 +13,8 @@ env:
 
 jobs:
   analyze:
-    name: Analyze (${{ matrix.language }})
-    runs-on: ${{ (matrix.language == 'swift' && 'macos-latest') || 'ubuntu-latest' }}
+    name: Analyze (Java)
+    runs-on: ubuntu-latest
     permissions:
       security-events: write
       packages: read
@@ -23,10 +23,6 @@ jobs:
 
     strategy:
       fail-fast: false
-      matrix:
-        include:
-          - language: java-kotlin
-            build-mode: autobuild
 
     services:
       xvfb:
@@ -49,19 +45,9 @@ jobs:
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v3
         with:
-          languages: ${{ matrix.language }}
-          build-mode: ${{ matrix.build-mode }}
+          languages: java
+          build-mode: autobuild
           queries: +security-extended,security-and-quality
-
-      - if: matrix.build-mode == 'manual'
-        shell: bash
-        run: |
-          echo 'If you are using a "manual" build mode for one or more of the' \
-            'languages you are analyzing, replace this with the commands to build' \
-            'your code, for example:'
-          echo '  make bootstrap'
-          echo '  make release'
-          exit 1
 
       - name: Build with Gradle
         run: gradle build -Djava.awt.headless=true
@@ -69,7 +55,7 @@ jobs:
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v3
         with:
-          category: "/language:${{ matrix.language }}"
+          category: "/language:java"
 
       - name: Run Scorecard Analysis
         uses: ossf/scorecard-action@v2
