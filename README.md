@@ -1,3 +1,8 @@
+# ClockSystem-TP3 (6/03/2025)
+
+Test code:
+![Gradle CI](https://github.com/3npC0nf1g/ClockSystem-TP3/actions/workflows/gradle.yml/badge.svg)
+
 # ClockSystem
 
 This is a gradle-based Java project for a Clock with Swing GUI and JUnit5 unit
@@ -79,7 +84,3 @@ possible within **DevContainer**. However, you can still use it to build
 4. Once the project is reopened in the container, you need to wait a bit for the
    container to build and start, and then you can start developing, all the
    tools and dependencies are already installed in the container.
-
-# ClockSystem-TP3 (6/03/2025)
-
-![Gradle CI](https://github.com/3npC0nf1g/ClockSystem-TP3/actions/workflows/gradle.yml/badge.svg)  
