@@ -1,6 +1,12 @@
 Test code:
 ![Gradle CI](https://github.com/3npC0nf1g/ClockSystem-TP3/actions/workflows/gradle.yml/badge.svg)
 
+Code quality:
+![PMD Code Scan](https://github.com/3npC0nf1g/ClockSystem-TP3/actions/workflows/pmd.yml/badge.svg)
+
+Code security:
+![CodeQL Workflow Status](https://github.com/3npC0nf1g/ClockSystem-TP3/actions/workflows/codeql.yml/badge.svg)
+
 # ClockSystem
 
 This is a gradle-based Java project for a Clock with Swing GUI and JUnit5 unit
