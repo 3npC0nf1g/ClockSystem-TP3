@@ -8,6 +8,7 @@ Code security:
 ![CodeQL Workflow Status](https://github.com/3npC0nf1g/ClockSystem-TP3/actions/workflows/codeql.yml/badge.svg)
 
 Repository security:
+[![Scorecard supply-chain security](https://github.com/3npC0nf1g/ClockSystem-TP3/actions/workflows/scorecard.yml/badge.svg)](https://github.com/3npC0nf1g/ClockSystem-TP3/actions/workflows/scorecard.yml)
 
 # ClockSystem
 
