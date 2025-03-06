@@ -72,14 +72,14 @@ jobs:
           category: "/language:${{ matrix.language }}"
 
       - name: Run Scorecard Analysis
-        uses: ossf/scorecard-action@v3
+        uses: ossf/scorecard-action@v2
         with:
           results_file: results.sarif
           format: sarif
           publish_results: true
 
       - name: Upload Scorecard Results
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: scorecard-results
           path: results.sarif
