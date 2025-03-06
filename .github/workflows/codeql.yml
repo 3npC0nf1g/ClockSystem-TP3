@@ -58,7 +58,7 @@ jobs:
         exit 1
 
     - name: Build with Gradle
-      run: ./gradlew build
+      run: gradle build
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
