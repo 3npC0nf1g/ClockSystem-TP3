@@ -11,7 +11,7 @@ on:
   pull_request:
     branches: [ "main" ]
   schedule:
-    - cron: '42 9 * * 0'
+#    - cron: '42 9 * * 0'
 
 env:
   DISPLAY: ":99.0" # Set a display for Xvfb
