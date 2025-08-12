@@ -38,11 +38,11 @@ jobs:
         options: -e VNC_SERVER=true -e VNC_PORT=5900
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
     - name: Start Xvfb
       run: Xvfb $DISPLAY -ac -screen 0 1600x1200x24 > /dev/null 2>&1 &
     - name: Checkout repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
 
     - name: Set up JDK 21
       uses: actions/setup-java@v4
