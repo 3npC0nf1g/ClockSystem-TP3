@@ -43,7 +43,7 @@ jobs:
           distribution: "temurin"
 
       - name: Initialize CodeQL
-        uses: github/codeql-action/init@v3
+        uses: github/codeql-action/init@v4
         with:
           languages: java
           build-mode: autobuild
@@ -53,7 +53,7 @@ jobs:
         run: gradle build -Djava.awt.headless=true
 
       - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v3
+        uses: github/codeql-action/analyze@v4
         with:
           category: "/language:java"
 
@@ -72,6 +72,6 @@ jobs:
           retention-days: 5
 
       - name: Upload SARIF results to code scanning
-        uses: github/codeql-action/upload-sarif@v3
+        uses: github/codeql-action/upload-sarif@v4
         with:
           sarif_file: results.sarif
